@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flight</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+      <a href="/" class="navbar-brand">Flight</a>
+      
+      <ul class = 'ml-3 navbar-nav mr-auto'>
+        <li><%= link_to 'ABOUT', about_homes_path, class: "nav-item nav-link text-white"%></li>
+        <li><%= link_to 'HOWTO', howto_homes_path, class: "nav-item nav-link text-white"%></li>
+      </ul>
+    
+      <ul class ='navbar-nav bg-light mr-3'>
+        <%= link_to 'ZERO ONE', zeroones_path, class: "nav-item nav-link text-dark d-inline" %>
+        <%= link_to 'CRICKET', crickets_path, class: "nav-item nav-link text-dark d-inline" %>
+        <%= link_to 'COUNT UP', countups_path, class: "nav-item nav-link text-dark d-inline" %>
+      </ul>
+    </nav>
+    <%= yield %>
+  </body>
+</html>
